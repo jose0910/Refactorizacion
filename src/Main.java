@@ -21,27 +21,33 @@ public class Main {
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = resultadoJ1;
-                else { score+="-"; tempScore = resultadoJ2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
+                score = resultadoActual(resultadoJ1, resultadoJ2, i, score);
             }
 
         }
     return score;
+    }
+
+    private static String resultadoActual(int resultadoJ1, int resultadoJ2, int i, String score) {
+        int tempScore;
+        if (i ==1) tempScore = resultadoJ1;
+        else { score +="-"; tempScore = resultadoJ2;}
+        switch(tempScore)
+        {
+            case 0:
+                score +="Love";
+                break;
+            case 1:
+                score +="Fifteen";
+                break;
+            case 2:
+                score +="Thirty";
+                break;
+            case 3:
+                score +="Forty";
+                break;
+        }
+        return score;
     }
 
     private static String ifpuntuacionIgual(int m_score1) {
