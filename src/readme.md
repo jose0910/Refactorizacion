@@ -1,0 +1,1 @@
+1. Refactorice el if de las puntuaciones iguales
